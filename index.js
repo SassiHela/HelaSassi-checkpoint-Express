@@ -4,7 +4,7 @@ const PORT = 3000;
 var router = express.Router();
 
 //Style css
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 app.set("view engine", "pug");
 app.set("views", "./Views");
@@ -22,9 +22,10 @@ router.use(function (req, res, next) {
   //0: sunday 1:monday  2: tuesday  3:wednesday  4:thursday  5: friday  6:saturday
   if (day === 0 || day === 6 || hour < 9 || hour > 17) {
     res.render("503");
-  }
-  next();
+  } else next();
 });
+
+//Get Method
 router.get("/", (request, response) => {
   response.render("Home");
 });
