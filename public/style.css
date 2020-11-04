@@ -1,0 +1,10 @@
+.services {
+  display: flex;
+  justify-content: space-around;
+}
+.service {
+  width: 40%;
+}
+.txt-service {
+  padding: 2px 16px;
+}
